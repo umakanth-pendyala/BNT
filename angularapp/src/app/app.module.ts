@@ -28,5 +28,3 @@ import { SigninComponent } from './signin/signin.component';
 })
 export class AppModule { }
 
-// asdasdoasdoahsdaiusdidasdasd
-// adasdasdad
