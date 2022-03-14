@@ -11,13 +11,15 @@ import { ContactComponent } from './contact/contact.component';
 import { RestServices } from './services/rest.service';
 import { SigninService } from './services/signin.service';
 import { SigninComponent } from './signin/signin.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SigninComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
