@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <section class="header">
@@ -9,23 +8,27 @@
             <a class="logo">Bait N Tackle</a>
             <div class="navbar-right">
               <a  routerLink="" class="active">Home</a>
-              <a  routerLink="About" > About <i class='fas fa-blog'></i></a>
-              <a> Orders <i class="fas fa-fish"></i></a>
-              <a>  My Cart <i class='fas fa-cart-arrow-down'></i> </a>
-              <a  routerLink="Contact"> Contact  <i class="fas fa-phone-square"></i> </a>
+              <a  routerLink="/About" > About <i class='fas fa-blog'></i></a>
+              <a  routerLink="/orders"> Orders <i class="fas fa-fish"></i></a>
+              <a  routerLink="/cart">  My Cart <i class='fas fa-cart-arrow-down'></i> </a>
+              <a  routerLink="/Contact"> Contact  <i class="fas fa-phone-square"></i> </a>
               <a> log out <i class="fas fa-power-off"></i></a>
             </div>
           </div>
     
         <h1>The Fish Specialist</h1>
         <p>Getting a taste of the ocean’s bounty.</p>
-    
-        <div class="input-group">
-            <input type="text" class="form-control"  placeholder="Search Here"  id="Searchbox">
-            <div class="input-group-append">
-            <button type="submit" class="input-group-text btn">Search</button>
-            </div>    
-        </div> 
+  <!--button-->  
+  <div class="wrapper">
+    <button class="a1" routerLink="/products">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Shop Now <i class="fa fa-shopping-bag"></i>
+      </button>
+  </div>
+ 
         <br><br><br><br><br><br><br> 
     </section>
     
@@ -150,16 +153,24 @@
 
 <!--Banner  starts-->
 <section class="banner">  <!--bg--> 
-    <div class="banner-highlights"><!--black board-->
-        <div class="containerbb"><!--black board inside content-->
+    <div class="banner-highlights"> <!--black board-->
+        <div class="containerbb"> <!--black board inside content-->
             <div class="row">
                 <div class="col-md-8">
                     <h2>Get 50% offer Only on  Today's Special</h2>
                     <h5>Add to Cart Soon  and avail 50% flat discount.</h5>
                 </div>
                 <div class="col-md-4">
-                    <a><button type="button" class="booking-btn">Shop Now <i class="fas fa-angle-double-right"></i>  </button></a>
-                </div>
+                    <div class="wrapper">
+                        <button class="a1" routerLink="/products">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Shop Now <i class="fa fa-shopping-bag"></i>
+                        </button>
+                    </div>
+                </div> 
             </div>
         </div>
     </div> <br><br><br><br> <!--to make the highlight proper visible-->
@@ -168,7 +179,7 @@
 
 <!-- user reviewz -->
 <section class="users-feedback">
-    <h1>Hear it from our customers</h1>
+    <h1>Hear it from our customers</h1> <i class=""></i>
     <br>
     <div class="container">
         <div class="row">
