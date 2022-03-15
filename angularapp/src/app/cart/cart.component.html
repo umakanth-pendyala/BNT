@@ -1,14 +1,15 @@
+<app-header></app-header>
 <ng-container *ngIf="products.length !=0">
     <div class="container">
-        <div class="card-table">
-            <div class="cart-product">
+        <div class="card-table" style="border: 0;">
+            <div class="card product" style="border: 0;">
                 <table class="table table-responsive">
                     <thead>
                         <tr>
                             <th>S.No</th>
                             <th>Product Name</th>
                             <th>Product Image</th>
-                            <th>Description</th>
+                            <th>Descriptipn</th>
                             <th>Price</th>
                             <th>Quantity</th>
                             <th>Total</th>
@@ -16,32 +17,30 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let item of products; let i = index">
+                        <tr *ngFor="let item of products; let i=index">
                             <td>{{i+1}}</td>
                             <td>{{item.title}}</td>
                             <td><img style="width: 120px;" src="{{item.image}}" alt=""></td>
                             <td style="width: 25%;">{{item.description}}</td>
-                            <th style="width: 12%;">{{item.price}}</th>
+                            <td style="width: 12%;">{{item.price}}</td>
                             <td style="width: 12%;">
-                            <button type="button" class="btn-incdec" (click)="inc(item)">
-                                <i><span class="material-icons">+</span></i>
-                            </button>
-                            <span>{{item.quantity}}</span>
-                            <button type="button" class="btn-incdec" (click)="dec(item)">
-                                <i><span class="material-icons">-</span></i>
-                            </button></td>
+                                <button type="button" class="btn-incdec" (click)="inc(item)">
+                                    <i><span class="material-icons">+</span></i></button>
+                                <span>{{item.quantity}}</span>
+                                <button type="button" class="btn-incdec" (click)="dec(item)">
+                                    <i><span class="material-icons">-</span>
+                                    </i></button></td>
                             <td style="width: 12%;">{{item.quantity*item.price}}</td>
                             <td>
                                 <button (click)="removeItem(item)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="5"></td>
-                            <td><button routerLink="/homepage" >Back</button></td>
+                            <td colspan="4"></td>
                             <td><button (click)="emptycart()" class="btn btn-danger">Empty Cart</button></td>
                             <td><button routerLink="/products" class="btn btn-primary">Shop More</button></td>
-                            <td><button class="btn btn-success">Pay</button></td>
-                            <td><strong>Grand Total : ₹{{grandTotal}}</strong></td>
+                            <td><button class="btn btn-success">Checkout</button></td>
+                            <td><strong>Grand Total  ₹{{cartTotal}}</strong></td>
                         </tr>
                     </tbody>
                 </table>
@@ -51,7 +50,7 @@
 </ng-container>
 
 
-<ng-container *ngIf="products.length ==0">
+<ng-container *ngIf="products.length==0">
     <div class="container">
         <div class="card">
             <h5 class="card-title">My Cart</h5>

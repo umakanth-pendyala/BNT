@@ -16,7 +16,6 @@ export class OrdersComponent implements OnInit {
     this.cartService.getProducts()
     .subscribe(res=>{
       this.orders = res;
-      this.total = this.cartService.getTotalPrice();
     })
   }
 
