@@ -1,0 +1,36 @@
+<ng-container>
+    <div class="container">
+        <div class="card-table">
+            <div class="cart-product">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Product Name</th>
+                            <th>Product Image</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of orders; let i = index">
+                            <td>{{i+1}}</td>
+                            <td>{{item.title}}</td>
+                            <td><img style="width: 120px;" src="{{item.image}}" alt=""></td>
+                            <th style="width: 12%;">{{item.price}}</th>
+                            <td style="width: 12%;"><span>{{item.quantity}}</span></td>
+                            <td style="width: 12%;">{{item.quantity*item.price}}</td>
+                        </tr>
+                        <!-- <tr>
+                            <td colspan="4"></td>
+                            <td><strong>Date: 24/10/2022</strong></td>
+                            <td><strong>Status: Item dispatched</strong></td>
+                        </tr> -->
+                    </tbody>
+                </table>
+                <button routerLink="/homepage" >Back</button>
+            </div>
+        </div>
+    </div>
+</ng-container>

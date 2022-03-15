@@ -1,0 +1,46 @@
+.form-body{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+}
+.center-text{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+.form-element{
+    width: 300px;
+    border-radius: 13px;
+    text-align: center;
+    font-weight: bold;
+    padding: 3px 0px;
+    margin: 15px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+#addProductButton, #modifyProductButton{
+    background-color: rgb(21, 46, 32);
+    width: 80px;
+    height: 35px;
+    position: absolute;
+    bottom: -5px;
+    left: 135px;
+    color: white;
+}
+#addProductButton:hover,  #modifyProductButton:hover, #close:hover{
+    cursor: pointer;
+}
+
+#close{
+    background-color: rgb(243, 41, 14);
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border-radius: 5px;
+    color: white; 
+}
+

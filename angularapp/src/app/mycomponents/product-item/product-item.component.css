@@ -1,0 +1,36 @@
+.body-element{
+    display: flex;
+    padding-left: 10px;
+    margin: 10px 0px;
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+}
+.container-body a{
+    text-decoration: none;
+}
+.body-element p{
+    font-weight: bold;
+    padding: 0px 61px;
+    color: white;
+}
+
+.body-element ul{
+    list-style: none;
+}
+
+.body-element ul li .modify{
+    background-color: rgb(44, 85, 55);
+    width: 60px;
+    border-radius: 6px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+.body-element ul li .delete{
+    background-color: rgb(197, 38, 38);
+    width: 60px;
+    border-radius: 6px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}

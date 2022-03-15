@@ -1,0 +1,37 @@
+<div class="container-body">
+        <div class="body-element">
+            <img src="{{ prod.productImage }}" alt="{{ prod.productName }}" width="100px" height="80px"
+                style="border-radius: 8px;">
+            <p>{{ prod.productName }}</p>
+            <p>$ {{ prod.productPrice }}</p>
+            <p>{{ prod.productQuantity }} kgs</p>
+            <ul>
+                <li><button class="delete" (click)="onDelete(prod)">Delete</button></li>
+                <!-- <hr> -->
+                <br>
+                <li><button class="modify" (click)="onModify(prod)">Modify</button></li>
+            </ul>   
+        </div>
+</div>
+    <!-- <tr>
+
+        <td><img src="{{ prod.productImage }}" alt="{{ prod.productName }}" width="100px" height="80px"
+            style="border-radius: 8px;"></td>
+            <td>
+                <p>{{ prod.productName }}</p>
+            </td>
+            <td>
+                <p>$ {{ prod.productPrice }}</p>
+            </td>
+            <td>
+                <p>{{ prod.productQuantity }} kgs</p>
+            </td>
+            <td>
+                <ul>
+                    <li><button class="delete" (click)="onDelete(prod)">Delete</button></li>
+                    <hr><br>
+                    <li><button class="modify" (click)="onModify(prod)">Modify</button></li>
+                </ul>
+            </td>
+            
+    </tr> -->

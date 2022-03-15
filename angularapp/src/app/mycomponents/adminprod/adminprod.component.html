@@ -1,0 +1,62 @@
+<header>
+    <nav>
+        <ul>
+            <li><a href="#" style="font-size: 22px;">Bait 'N Tackle</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Orders</a></li>
+            <li>
+                <a href="#">
+                    <p class="right">Logout</p>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="container-main">
+        <div class="container-left">
+            <!-- <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Image </th>
+                    <th scope="col">productName </th>
+                    <th scope="col">Price </th>
+                    <th scope="col">Quantity </th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let prod of prods">
+                        <app-product-item [prod]="prod" (prodDelete)="deleteProd($event)"></app-product-item>
+                    </tr>
+                </tbody>
+
+            </table>     -->
+
+            <div class="container-head">
+                <nav>
+                    <ul>
+                        <li>Image</li>
+                        <li>Product Name</li>
+                        <li>Price</li>
+                        <li>Quantity</li>
+                    </ul>
+                </nav>
+            </div> 
+            <div class="container-body">
+                <div *ngFor="let prod of prods">
+                    <app-product-item [prod]="prod" (prodDelete)="deleteProd($event)"></app-product-item>
+                </div>
+            </div>
+        </div>
+        <div class="container-right">
+            <div>
+                <app-add-product (prodAdd)="addProd($event)" (prodModify)="modifyProd($event)"></app-add-product>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    
+</footer>
