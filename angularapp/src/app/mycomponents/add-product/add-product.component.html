@@ -1,0 +1,51 @@
+<div class="container-right">
+    <div *ngIf="toggleForm">
+        <p class="center-text">Add Product</p>
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-body">
+                <label for="enterProductName"></label>
+                <input type="text" name="productName" id="enterProductName" placeholder="Enter the Product Name"
+                [(ngModel)]="productName" class="form-element">
+                
+                <label for="enterProductPrice"></label>
+                <input type="text" name="productPrice" id="enterProductPrice" placeholder="Enter the Product Price"
+                class="form-element" [(ngModel)]="productPrice" #enterProductPrice>
+                
+                <label for="enterProductImageUrl"></label>
+                <input type="text" name="productImage" id="enterProductImageUrl" placeholder="Enter the Product Image URL"
+                class="form-element" [(ngModel)]="productImage" #enterProductImageUrl>
+                
+                <label for="enterproductQuantity"></label>
+                <input type="text" name="productQuantity" id="enterproductQuantity" placeholder="Enter the Product Quantity"
+                class="form-element" [(ngModel)]="productQuantity" #enterProductQuantity>
+                
+                <input type="submit" value="ADD" id="addProductButton" class="form-element">
+            </div>
+        </form>
+    </div>
+    <div *ngIf="!toggleForm">
+        <p class="center-text">Modify Product</p>
+        <form (ngSubmit)="onModify()">
+            <div class="form-body">
+                <label for="enterProductName"></label>
+                <input type="text" name="productName" id="enterProductName" placeholder="Enter the Product Name"
+                [(ngModel)]="productName" class="form-element">
+                
+                <label for="enterProductPrice"></label>
+                <input type="text" name="productPrice" id="enterProductPrice" placeholder="Enter the Product Price"
+                class="form-element" [(ngModel)]="productPrice" #enterProductPrice>
+                
+                <label for="enterProductImageUrl"></label>
+                <input type="text" name="productImage" id="enterProductImageUrl" placeholder="Enter the Product Image URL"
+                class="form-element" [(ngModel)]="productImage" #enterProductImageUrl>
+                
+                <label for="enterproductQuantity"></label>
+                <input type="text" name="productQuantity" id="enterproductQuantity" placeholder="Enter the Product Quantity"
+                class="form-element" [(ngModel)]="productQuantity" #enterProductQuantity>
+                
+                <input type="submit" value="Modify" id="modifyProductButton" class="form-element">
+                <input type="button" value="X" name="close" id="close" (click)="close()">
+            </div>
+        </form>
+    </div>
+</div>
