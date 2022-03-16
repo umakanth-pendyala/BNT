@@ -1,4 +1,6 @@
-<ng-container>
+<app-header></app-header>
+
+<ng-container *ngIf="orders.length!=0">
     <div class="container">
         <div class="card-table">
             <div class="cart-product">
@@ -27,10 +29,25 @@
                             <td><strong>Date: 24/10/2022</strong></td>
                             <td><strong>Status: Item dispatched</strong></td>
                         </tr> -->
+                       
                     </tbody>
                 </table>
-                <button routerLink="/homepage" >Back</button>
+                <button routerLink="/homepage" class="btn" style="background-color: black; color: white;">Back</button>
             </div>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="orders.length==0">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">My Orders</h5>
+        </div>
+        <div class="center">
+            <img src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" alt="">
+            <h4>Order Not Yet Placed!</h4>
+            <h6>Place order now</h6>
+            <button routerLink="/products" class="btn" style="background-color: black; color: white;">Shop Now</button>
         </div>
     </div>
 </ng-container>
