@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Subject, Subscription } from 'rxjs';
 import { RestServices } from '../services/rest.service';
 import { SigninService } from '../services/signin.service';
+import { UserModelService } from '../shared/user.model';
 
 
 @Component({
@@ -18,7 +19,8 @@ export class SigninComponent implements OnDestroy {
   constructor(
     private signInService: SigninService,
     private restService: RestServices,
-    private router: Router
+    private router: Router,
+    private userModelService: UserModelService
   ) {
 
   }
@@ -56,12 +58,10 @@ export class SigninComponent implements OnDestroy {
         password: formData.value.password
       }).subscribe(responseData => {
         if (responseData == true) {
-          console.log(true)
-          // this.userModel.setUserValidationStatus(true);
-          // this.router.navigate(['/users/dashboard'])
+          this.userModelService.setValidUser(true);
+          this.router.navigate(['/homepage'])
         } else {
           console.log(false)
-          // this.userModel.setUserValidationStatus(false);
         }
       }, error => {
         console.log("error occured while connecting to server")
@@ -73,7 +73,6 @@ export class SigninComponent implements OnDestroy {
 
   testValues() {
     console.log(this.emailVerified);
-    // console.log(this.otpService.otpVerified);
   }
 
   ngOnDestroy() {

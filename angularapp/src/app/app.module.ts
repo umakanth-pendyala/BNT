@@ -22,6 +22,7 @@ import { ProductsComponent } from './products/products.component';
 import { HeaderComponent } from './header/header.component';
 import { CartComponent } from './cart/cart.component';
 import { OrdersComponent } from './orders/orders.component';
+import { UserModelService } from './shared/user.model';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { OrdersComponent } from './orders/orders.component';
   providers: [    
     SigninService,
     RestServices,
-    test
+    test,
+    UserModelService
   ],
   bootstrap: [AppComponent]
 })
