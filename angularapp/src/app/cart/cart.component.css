@@ -47,17 +47,15 @@ h6 {
     border-radius: 3px !important;
 }
 .btn-incdec{
-    background: rgb(88, 88, 240);
     border-radius: 50%;
     font-size: 16px;
     color: white;
     margin: 0 8px;
-    border:1px solid blue ;
+    border:1px solid black;
 }
 .btn-incdec:hover{
-    color: rgb(88, 88, 240);
     background: transparent;
-    border:1px solid blue ;
+    border:1px solid black;
 }
 .td{
     color: #fff;
