@@ -10,7 +10,7 @@ import { AdminprodComponent } from './mycomponents/adminprod/adminprod.component
 import { ProductsComponent } from './products/products.component';
 import { CartComponent } from './cart/cart.component';
 import { OrdersComponent } from './orders/orders.component';
-
+import { AdminOrdersComponent } from './admin-orders/admin-orders.component';
 const routes: Routes = [ 
   { path: 'users/login', component: SigninComponent},
   { path:'About',component:AboutComponent}, 
@@ -21,7 +21,8 @@ const routes: Routes = [
   { path: 'admin/dashboard', component: AdminprodComponent},
   { path: 'products', component: ProductsComponent},
   { path:'cart', component: CartComponent},
-  { path: 'orders', component:OrdersComponent}
+  { path: 'orders', component:OrdersComponent},
+  {path: 'admin-Orders', component: AdminOrdersComponent}
 ];
 
 @NgModule({
