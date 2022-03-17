@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AboutComponent } from './about/about.component';
 import { FilterPipe } from './shared/filter.pipe';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { OrderModule } from 'ngx-order-pipe';
+import { SearchfilterPipe } from './shared/searchfilter.pipe';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,6 +25,10 @@ import { ProductsComponent } from './products/products.component';
 import { HeaderComponent } from './header/header.component';
 import { CartComponent } from './cart/cart.component';
 import { OrdersComponent } from './orders/orders.component';
+import { UserModelService } from './shared/user.model';
+import { AdminOrdersComponent } from './admin-orders/admin-orders.component';
+import { AdminOrdersServiceService } from './services/admin-orders-service.service';
+ 
 
 @NgModule({
   declarations: [
@@ -38,18 +45,24 @@ import { OrdersComponent } from './orders/orders.component';
     FilterPipe,
     HeaderComponent,
     CartComponent,
-    OrdersComponent
+    OrdersComponent,
+    AdminOrdersComponent,
+    SearchfilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule,
+    OrderModule
   ],
   providers: [    
     SigninService,
     RestServices,
-    test
+    test,
+    UserModelService,
+    AdminOrdersServiceService
   ],
   bootstrap: [AppComponent]
 })
