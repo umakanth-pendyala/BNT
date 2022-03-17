@@ -1,16 +1,26 @@
 <div class="container-body">
         <div class="body-element">
-            <img src="{{ prod.productImage }}" alt="{{ prod.productName }}" width="100px" height="80px"
+            <div class="box1">
+                <img src="{{ prod.productImage }}" alt="{{ prod.productName }}" width="100px" height="80px"
                 style="border-radius: 8px;">
-            <p>{{ prod.productName }}</p>
-            <p>$ {{ prod.productPrice }}</p>
-            <p>{{ prod.productQuantity }} kgs</p>
-            <ul>
-                <li><button class="delete" (click)="onDelete(prod)">Delete</button></li>
-                <!-- <hr> -->
-                <br>
-                <li><button class="modify" (click)="onModify(prod)">Modify</button></li>
-            </ul>   
+            </div>
+            <div class="box2">
+                <p>{{ prod.productName }}</p>
+            </div>
+            <div class="box3">
+                <p>$ {{ prod.productPrice }}</p>
+            </div>
+            <div class="box4">
+                <p>{{ prod.productQuantity }} kgs</p>
+            </div>
+            <div class="box5">
+                <ul>
+                    <li><button class="delete" (click)="onDelete(prod)">Delete</button></li>
+                    <!-- <hr> -->
+                    <br>
+                    <li><button class="modify" (click)="onModify(prod)">Modify</button></li>
+                </ul> 
+            </div>
         </div>
 </div>
     <!-- <tr>

@@ -1,6 +1,6 @@
 <div class="container-right">
     <div *ngIf="toggleForm">
-        <p class="center-text">Add Product</p>
+        <p class="center-text text-size">Add Product</p>
         <form (ngSubmit)="onSubmit()">
             <div class="form-body">
                 <label for="enterProductName"></label>
@@ -24,7 +24,7 @@
         </form>
     </div>
     <div *ngIf="!toggleForm">
-        <p class="center-text">Modify Product</p>
+        <p class="center-text text-size">Modify Product</p>
         <form (ngSubmit)="onModify()">
             <div class="form-body">
                 <label for="enterProductName"></label>
