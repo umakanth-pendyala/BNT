@@ -1,44 +1,45 @@
-<div class="signup-form">	
-    <form action="/examples/actions/confirmation.php" method="post" (ngSubmit)="onSubmit(f)" #f="ngForm">
-		<h2>Sign Up</h2>
-		<p class="lead">It's free and hardly takes more than 30 seconds.</p>
-        <div class="form-group">
-			<div class="input-group">
-				<span class="input-group-addon"><i class="fa fa-user"></i></span>
-				<input type="text" class="form-control" name="username" placeholder="Username" required="required" ngModel >
-			</div>
-        </div>
-        <div class="form-group">
-			<div class="input-group">
-				<span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
-				<input type="tel" class="form-control" name="contact" placeholder="contact" required="required" ngModel>
-			</div>
-        </div>
-        <div class="form-group">
-			<div class="input-group">
-				<span class="input-group-addon"><i class="fa fa-paper-plane"></i></span>
-				<input type="email" class="form-control" name="email" placeholder="Email Address" required="required" ngModel>
-			</div>
-        </div>
-		<div class="form-group">
-			<div class="input-group">
-				<span class="input-group-addon"><i class="fa fa-lock"></i></span>
-				<input type="password" class="form-control" name="password" placeholder="Password" required="required" ngModel>
-			</div>
-        </div>
-		<div class="form-group">
-			<div class="input-group">
-				<span class="input-group-addon">
-					<i class="fa fa-lock"></i>
-					<i class="fa fa-check"></i>
-				</span>
-				<input type="password" class="form-control" name="conformPassword" placeholder="Conform Password" required="required" ngModel>
-			</div>
-        </div>        
-		<div class="form-group" >
-            <button type="submit" class="btn btn-primary btn-block btn-lg" [disabled]="!validateEntireForm(f)">Sign Up</button>
-        </div>
-		<p class="small text-center">By clicking the Sign Up button, you agree to our <br><a href="#">Terms &amp; Conditions</a>, and <a href="#">Privacy Policy</a>.</p>
-    </form>
-	<div class="text-center">Already have an account? <a href="#">Login here</a>.</div>
+<div class="wrapper">
+	<div class="signup-form">
+			<form action="/examples/actions/confirmation.php" method="post" (ngSubmit)="onSubmit(f)" #f="ngForm">
+			<h2>Sign Up</h2>
+			<p class="lead">It's free and hardly takes more than 30 seconds.</p>
+					<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon"><i class="fa fa-user"></i></span>
+					<input type="text" class="form-control" name="username" placeholder="Username" required="required" ngModel >
+				</div>
+					</div>
+					<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+					<input type="tel" class="form-control" name="contact" placeholder="contact" required="required" ngModel>
+				</div>
+					</div>
+					<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon"><i class="fa fa-paper-plane"></i></span>
+					<input type="email" class="form-control" name="email" placeholder="Email Address" required="required" ngModel>
+				</div>
+					</div>
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+					<input type="password" class="form-control" name="password" placeholder="Password" required="required" ngModel>
+				</div>
+					</div>
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon">
+						<i class="fa fa-lock"></i>
+						<i class="fa fa-check"></i>
+					</span>
+					<input type="password" class="form-control" name="conformPassword" placeholder="Conform Password" required="required" ngModel>
+				</div>
+					</div>
+			<div class="form-group" >
+							<button type="submit" class="btn btn-primary btn-block btn-lg" [disabled]="!validateEntireForm(f)">Sign Up</button>
+					</div>
+			</form>
+		<div class="text-center" style="color: #fff;">Already have an account? <a routerLink="/users/login" style="color: #fff; text-decoration: underline;">Login here</a>.</div>
+	</div>
 </div>

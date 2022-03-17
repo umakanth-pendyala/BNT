@@ -12,9 +12,7 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onSubmit(formData: NgForm){
-    console.log(formData.value)
-  }
+
   validateEmail(email: string) {
     var regexp = new RegExp('^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$');
     return regexp.test(email);
@@ -58,5 +56,10 @@ export class SignupComponent implements OnInit {
     } else {
       return false;
     }
+  }
+
+
+  onSubmit(formData: NgForm){
+    console.log(formData.value)
   }
 }
