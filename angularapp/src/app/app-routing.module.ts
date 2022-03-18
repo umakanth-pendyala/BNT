@@ -5,7 +5,6 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { SignupComponent } from './signup/signup.component';
-
 import { AdminprodComponent } from './mycomponents/adminprod/adminprod.component';
 import { ProductsComponent } from './products/products.component';
 import { CartComponent } from './cart/cart.component';
@@ -22,7 +21,7 @@ const routes: Routes = [
   { path: 'products', component: ProductsComponent},
   { path:'cart', component: CartComponent},
   { path: 'orders', component:OrdersComponent},
-  {path: 'admin-Orders', component: AdminOrdersComponent}
+  {path: 'admin/Orders', component: AdminOrdersComponent}
 ];
 
 @NgModule({
