@@ -7,8 +7,6 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-
   public totalItem : number = 0;
   public searchTerm !: string;
   constructor(private cartService : CartService) { }

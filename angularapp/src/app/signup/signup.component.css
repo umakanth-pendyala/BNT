@@ -1,3 +1,4 @@
+/*Priya starts*/
 body {
 	color: black;
 
@@ -49,6 +50,12 @@ body {
 .signup-form .input-group-addon {
 	max-width: 42px;
 	text-align: center;
+
+	/*Priya Ends     when pushing dont forget ti add ' } '                 */
+
+
+	/*Deva starts*/
+
 	background: none;
 	border-bottom: 1px solid rgb(252, 250, 250);
 	padding-right: 5px;
@@ -77,14 +84,17 @@ body {
 	position: relative;
 	top: 8px;
 }
+
 .signup-form .fa-phone{
     font-size: 21px;
     position: relative;
 
 }
+
 .signup-form .fa-paper-plane {
 	font-size: 17px;
 }
+
 .signup-form .fa-check {
 	color: rgb(217, 221, 235);
 	left: 5px;
@@ -93,5 +103,6 @@ body {
 	position: absolute; 
 	padding-top: 1px;
 	margin-right: 20px; 
-	
 }
+
+/*Deva ends*/

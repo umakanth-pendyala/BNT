@@ -34,11 +34,7 @@
     margin-bottom: 15px;
     transition: 0.3s ease-in-out;
 }
-
 .card img:hover {
     transition: 0.3s ease-in-out;
     transform: scale(1.1);
 }
-/* .div{
-    color: #fff;
-} */

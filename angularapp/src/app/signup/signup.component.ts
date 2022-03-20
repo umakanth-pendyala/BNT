@@ -1,3 +1,4 @@
+/*muskan starts*/
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
@@ -19,8 +20,6 @@ export class SignupComponent implements OnInit {
     var regexp = new RegExp('^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$');
     return regexp.test(email);
   }
-
-
   validatePassword(password: string) {
     var regexp = new RegExp('^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$');
     return regexp.test(password);
@@ -60,3 +59,5 @@ export class SignupComponent implements OnInit {
     }
   }
 }
+
+/*muskan ends*/

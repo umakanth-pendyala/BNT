@@ -17,9 +17,9 @@ export class AdminOrdersComponent implements OnInit {
   this.adminOrderService.getOrders().subscribe((result : any) => {
     this.order = result;
   });
+
   
-  
-  }
+}
 
 
   sort(key : any) {

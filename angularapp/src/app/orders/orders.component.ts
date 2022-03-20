@@ -17,6 +17,4 @@ export class OrdersComponent implements OnInit {
     .subscribe(res=>{
       this.orders = res;
     })
-  }
-
-}
+}}

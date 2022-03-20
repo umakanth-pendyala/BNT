@@ -1,3 +1,4 @@
+//prassana starts
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -48,6 +49,9 @@ export class SigninComponent implements OnDestroy {
   onSubmit(formData: NgForm) {
 
     this.signInService.setEmail(formData.value.username);
+    //prassana ends
+
+    //adeeb starts
     this.signInService.setPassword(formData.value.password);
     this.validEmail = this.signInService.checkValidityOfEmail();
     this.validPassword = this.signInService.checkValidityOfPassword();
@@ -78,6 +82,3 @@ export class SigninComponent implements OnDestroy {
   ngOnDestroy() {
   }
 }
-
-//[ngClass]="{'is-invalid': signInForm.controls.username.touched ? !validEmail : false}"
-//  @ViewChild('f') signInForm :NgForm | undefined;
