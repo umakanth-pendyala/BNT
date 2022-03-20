@@ -33,16 +33,7 @@ export class ProductsComponent implements OnInit {
   }
   addtocart(item: any){
     this.cartService.addtoCart(item);
-    // Swal.fire({
-    //   icon: 'success',
-    //   title: 'Item added to cart!',
-    //   showConfirmButton: false,
-    //   timer: 2000,
-    //   position: 'top',
-    //   toast: true
-    // })
-
-  }
+    }
   filter(category:string){
     this.filterCategory = this.productList
     .filter((a:any)=>{
@@ -51,5 +42,4 @@ export class ProductsComponent implements OnInit {
       }
     })
   }
-
 }

@@ -54,6 +54,7 @@ h6 {
     margin: 0 8px;
     border:1px solid blue ;
 }
+
 .btn-incdec:hover{
     color: rgb(88, 88, 240);
     background: transparent;
