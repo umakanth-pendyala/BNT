@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { RestServices } from '../services/rest.service';
+import { UserModelService } from '../shared/user.model';
 
 @Component({
   selector: 'app-signup',
@@ -8,7 +11,10 @@ import { NgForm } from '@angular/forms';
 })
 export class SignupComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private restService: RestServices, 
+    private router: Router, 
+    private userModelService: UserModelService) { }
 
   ngOnInit(): void {
   }
@@ -60,6 +66,19 @@ export class SignupComponent implements OnInit {
 
 
   onSubmit(formData: NgForm){
-    console.log(formData.value)
+    if (this.validateEntireForm(formData)) {
+      this.restService.postUserSignUpData(formData.value).subscribe({
+        next: (responseData: any) => {
+          if (responseData != false) {
+            this.userModelService.setValidUser(true);
+            this.router.navigate(['/homepage'])
+          } else {
+            console.log("Invalid sign up data");
+          }
+        }
+      })
+    } else {
+      formData.reset();
+    }
   }
 }

@@ -9,4 +9,9 @@ export class RestServices {
   postUserLoginData(userObject: {email: string, password: string}) {
     return this.http.post('http://localhost:8080/user/login', userObject);
   }
+
+
+  postUserSignUpData(userObject: any) {
+    return this.http.post('http://localhost:8080/user/signup', userObject);
+  }
 }

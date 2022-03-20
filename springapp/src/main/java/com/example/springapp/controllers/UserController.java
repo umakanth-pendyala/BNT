@@ -49,8 +49,8 @@ public class UserController {
 			if (userRepository.findByEmail(userData.getEmail()) == null)  {
 				/*Validation Rules*/
 				userRepository.save(userData);
-			} else return "user already exists";
-			return true;
+				return true;
+			} else return false;
 		} catch (Exception e) {
 			return false;
 		}
