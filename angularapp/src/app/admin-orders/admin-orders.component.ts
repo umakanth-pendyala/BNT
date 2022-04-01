@@ -16,12 +16,9 @@ export class AdminOrdersComponent implements OnInit {
   ngOnInit(): void {
   this.adminOrderService.getOrders().subscribe((result : any) => {
     this.order = result;
-  });
-
-  
+    console.log(result);
+  }); 
 }
-
-
   sort(key : any) {
     this.key = key;
     this.reverse = !this.reverse;

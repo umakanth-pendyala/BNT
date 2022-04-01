@@ -10,6 +10,6 @@ export class AdminOrdersServiceService {
   constructor(private http: HttpClient) { }
 
   getOrders(): Observable<any> {
-    return this.http.get("../assets/Orders.json");
+    return this.http.get("http://localhost:8080/adminOrders");
   }
 }
