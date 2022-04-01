@@ -14,12 +14,11 @@ public class UserEntity {
 	
 	public UserEntity() {}
 	
-	public UserEntity(String email, String password, String contact, String username, String gender) {
+	public UserEntity(String email, String password, String contact, String username) {
 		this.email = email;
 		this.password = password;
 		this.contact = contact;
 		this.username = username;
-		this.gender = gender;
 	}
 
 
@@ -40,8 +39,7 @@ public class UserEntity {
 	@Column(name = "username")
 	private String username;
 	
-	@Column(name = "gender")
-	private String gender;
+
 
 	public Long getUser_id() {
 		return user_id;
@@ -83,18 +81,20 @@ public class UserEntity {
 		this.username = username;
 	}
 
-	public String getGender() {
-		return gender;
-	}
 
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
 
+//	public String getGender() {
+//		return gender;
+//	}
+//
+//	public void setGender(String gender) {
+//		this.gender = gender;
+//	}
+	
 	@Override
 	public String toString() {
 		return "UserEntity [user_id=" + user_id + ", email=" + email + ", password=" + password + ", contact=" + contact
-				+ ", username=" + username + ", gender=" + gender + "]";
+				+ ", username=" + username + "]";
 	}
 		
 }
